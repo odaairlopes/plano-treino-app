@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-slate-800 antialiased;
+    @apply dark:bg-slate-950 dark:text-slate-200;
+  }
+}
+
+@layer components {
+  /* Imagens e GIFs dentro do conteúdo markdown */
+  .markdown-content img {
+    @apply mx-auto rounded-xl border border-slate-200 shadow-sm dark:border-slate-800;
+    @apply max-w-full h-auto;
+  }
+
+  .markdown-content table {
+    @apply w-full text-left text-sm;
+  }
+
+  .markdown-content th {
+    @apply bg-slate-50 dark:bg-slate-900;
+  }
+}
